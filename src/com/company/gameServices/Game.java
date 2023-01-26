@@ -99,11 +99,12 @@ public class Game  {
 
                 UI.getInstance().nameMessage(i);
                 name=GetCommand.getInstance().insertName();
-                /**
+
                 System.out.println("enter pass");
                 pass = myscanner.nextLine();
+
                 adduser(name,pass);
-                 */
+
                 addPlayer(new Human(name));
             }
         }
@@ -438,14 +439,14 @@ public class Game  {
         UI.getInstance().gameOver(this);
     }
 
-    /**
+
     public void adduser(String name,String pass){
 
         user user = new user(name,pass);
         this.userNP.add(user);
-        saveToFile();
+      //  saveToFile();
     }
-
+    /**
 
      *
 
