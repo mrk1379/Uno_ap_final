@@ -187,12 +187,14 @@ public class Game  {
         onCard = deck.pop();
         onColor = onCard.getColor();
         if(onCard.getSign().equals("s")){
+            UI.getInstance().displayCard(onCard);
             nextPerson();
         }else if(onCard.getSign().equals("2+")){
 
 
             playerOnTurn.addOneCard(this);
             playerOnTurn.addOneCard(this);
+            UI.getInstance().displayCard(onCard);
             UI.getInstance().displayPlayerCard(this.getPlayerOnTurn());
 
             nextPerson();
@@ -201,11 +203,13 @@ public class Game  {
             playerOnTurn.addOneCard(this);
             playerOnTurn.addOneCard(this);
             playerOnTurn.addOneCard(this);
+            UI.getInstance().displayCard(onCard);
             UI.getInstance().displayPlayerCard(this.getPlayerOnTurn());
 
             nextPerson();
         }else if(onCard.getSign().equals("C")){
             Color chosen = this.getPlayerOnTurn().chooseColor(this);
+            UI.getInstance().displayCard(onCard);
             this.setOnColor(chosen);
 
         }
